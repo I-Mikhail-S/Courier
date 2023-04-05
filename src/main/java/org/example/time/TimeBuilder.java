@@ -1,5 +1,7 @@
 package org.example.time;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
@@ -36,9 +38,10 @@ public class TimeBuilder {
         // matched the ReGex
         return m.matches();
     }
-    public static long getTime(String s1,String s2){
+    public static long getTime(String s1,String s2) throws ParseException {
+        String format = "mm:ss";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        return (dateFormat.parse(s2).getTime()-dateFormat.parse(s1).getTime())/1000;
 
-        return 0;
-      //  return ChronoUnit.SECONDS.between(Calendar.se, LocalDateTime.parse(s2));
     }
 }
