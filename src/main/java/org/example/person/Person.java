@@ -2,25 +2,27 @@ package org.example.person;
 /**
  * Фундаментальный клас person....
  */
-public abstract class Person {
+public  class Person {
 
     private int id;//
     private String name;
     private double speed;
-    private double energy; //сила
-private String surName;
+    private double energy;
 
-/*    public int getId() {
+    public Person() {
+    }
+
+    public Person(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
     }
 
     public String getName() {
@@ -46,13 +48,6 @@ private String surName;
     public void setEnergy(double energy) {
         this.energy = energy;
     }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", speed=" + speed +
-                ", energy=" + energy + '}';
-    }*/
 }
+
+

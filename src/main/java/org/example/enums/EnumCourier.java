@@ -1,4 +1,4 @@
-package org.example.delete;
+package org.example.enums;
 
 public enum EnumCourier {
     PEOPLE,

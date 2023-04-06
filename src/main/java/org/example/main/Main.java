@@ -1,14 +1,12 @@
 package org.example.main;
 
-import org.example.courier.CourierBike;
-import org.example.delete.EnumCourier;
-import org.example.fabric.CourierFabric;
+import org.example.enums.EnumCourier;
+import org.example.fabric.Builder;
 import org.example.person.Person;
-import org.example.service.CourierService;
 
 public class Main {
-    public static void main(String[] args) {
-        CourierFabric courierFabric = new CourierFabric();
-        Person courierCar = courierFabric.orderCoffee(EnumCourier.CAR);
+    public static void main(String[] args) throws Exception {
+        Person car = new Builder(EnumCourier.CAR).id(6).name("sem").speed(6).energy(8).build();
+        System.out.println(car.getName());
     }
 }
