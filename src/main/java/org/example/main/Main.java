@@ -1,6 +1,5 @@
 package org.example.main;
 
-<<<<<<< HEAD
 import org.example.courier.CourierBike;
 import org.example.delete.EnumCourier;
 import org.example.fabric.CourierFabric;
@@ -11,6 +10,5 @@ public class Main {
     public static void main(String[] args) {
         CourierFabric courierFabric = new CourierFabric();
         Person courierCar = courierFabric.orderCoffee(EnumCourier.CAR);
-        courierCar.setId(12);
     }
 }
