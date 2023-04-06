@@ -7,7 +7,7 @@ import org.example.enumType.EnumCourier;
 import org.example.person.Person;
 
 public class FactoryCourier {
-    public Person addTypeCourier(EnumCourier type) {
+    public Person addTypeCourier(int id,String name,EnumCourier type) {
         Person person = null;
 
         switch (type) {
@@ -20,11 +20,7 @@ public class FactoryCourier {
             case BIKE:
                 person = new BikeCourier();
                 break;
-
         }
-
-
-        System.out.println("Вот ваш кофе! Спасибо, приходите еще!");
         return person;
     }
 }

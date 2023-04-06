@@ -6,4 +6,7 @@ public class CarCourier extends Person {
     public CarCourier(PersonBuilder personBuilder) {
         super(personBuilder);
     }
+
+    public CarCourier() {
+    }
 }

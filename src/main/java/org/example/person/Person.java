@@ -4,8 +4,8 @@ package org.example.person;
  */
 public  class Person {
 
-    private final int id;
-    private final String name;
+    private  int id;
+    private String name;
     private double speed;
     private double energy;
 
@@ -17,6 +17,8 @@ public  class Person {
         this.energy = personBuilder.energy;
     }
 
+    public Person() {
+    }
     public static class PersonBuilder{
         private final  int id;
         private final String name;
