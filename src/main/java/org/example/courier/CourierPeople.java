@@ -19,6 +19,7 @@ public class CourierPeople extends Person {
 
     public CourierPeople(int id, String name) {
         super(new PersonBuilder(id,name));
+        ы
     }
 
     @Override
