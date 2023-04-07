@@ -29,7 +29,7 @@ public class Builder {
 
     public Builder id(int id) {
 
-        person.setEnergy(id);
+        person.setId(id);
         return this;
     }
 
@@ -38,7 +38,10 @@ public class Builder {
         person.setSpeed(speed);
         return this;
     }
-
+    public Builder isFree(boolean free){
+        person.setSetIsFree(free);
+        return this;
+    }
     public Person build() {
 
         return person;
@@ -59,6 +62,25 @@ public class Builder {
                     break;
                 case PEOPLE:
                     person = new CourierPeople();
+                    break;
+                default:
+                    throw new Exception("Invalid product type!");
+            }
+
+            return person;
+        }
+        Person getNewCourier(int id,String name,double speed,double energy,EnumCourier enumCourier) throws Exception {
+            Person person = null;
+
+            switch (enumCourier) {
+                case CAR:
+                    person = new CourierCar(id,name,speed,energy);
+                    break;
+                case BIKE:
+                    person = new CourierBike(id,name,speed,energy);
+                    break;
+                case PEOPLE:
+                    person = new CourierPeople(id,name,speed,energy);
                     break;
                 default:
                     throw new Exception("Invalid product type!");

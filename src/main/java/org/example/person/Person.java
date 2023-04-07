@@ -9,13 +9,17 @@ public  class Person {
     private double speed;
     private double energy;
 
-    public Person() {
-
+    public boolean getIsFree() {
+        return setIsFree;
     }
 
-    public Person(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public void setSetIsFree(boolean setIsFree) {
+        this.setIsFree = setIsFree;
+    }
+
+    private boolean setIsFree;
+    public Person() {
+
     }
 
     public Person(int id, String name, double speed, double energy) {

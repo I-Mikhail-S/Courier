@@ -13,12 +13,52 @@ public class CourierBike  extends Person{
         super();
     }
 
-    public CourierBike(int id, String name) {
-        super(id, name);
+    public CourierBike(int id, String name,double speed,double energy) {
+        super(id, name,speed,energy);
     }
 
-    public boolean isFree() {
-        return free;
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public double getSpeed() {
+        return speed;
+    }
+
+    @Override
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    @Override
+    public double getEnergy() {
+        return energy;
+    }
+
+    @Override
+    public void setEnergy(double energy) {
+        this.energy = energy;
+    }
+
+    public void setIsFree(boolean free) {
+        this. free = free;
     }
 
     @Override
@@ -28,7 +68,7 @@ public class CourierBike  extends Person{
                 ", name='" + getName() + '\'' +
                 ", speed=" + getSpeed() +
                 ", energy=" + getEnergy() +
-                ", free=" + isFree() +
+                ", free=" + getIsFree() +
                 '}';
     }
 }
