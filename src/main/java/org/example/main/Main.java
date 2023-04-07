@@ -7,6 +7,6 @@ import org.example.person.Person;
 public class Main {
     public static void main(String[] args) throws Exception {
         Person car = new Builder(EnumCourier.CAR).id(6).name("sem").speed(6).energy(8).build();
-        System.out.println(car.getName());
+        System.out.println(car.toString());
     }
 }

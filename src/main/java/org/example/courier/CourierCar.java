@@ -16,4 +16,19 @@ public class CourierCar extends Person {
     public CourierCar(int id, String name) {
         super(id, name);
     }
+
+    public boolean isFree() {
+        return free;
+    }
+
+    @Override
+    public String toString() {
+        return "CourierCar{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", speed=" + getSpeed() +
+                ", energy=" + getEnergy() +
+                ", free=" + isFree() +
+                '}';
+    }
 }

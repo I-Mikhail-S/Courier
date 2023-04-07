@@ -10,11 +10,19 @@ public  class Person {
     private double energy;
 
     public Person() {
+
     }
 
     public Person(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Person(int id, String name, double speed, double energy) {
+        this.id = id;
+        this.name = name;
+        this.speed = speed;
+        this.energy = energy;
     }
 
     public int getId() {
@@ -48,6 +56,8 @@ public  class Person {
     public void setEnergy(double energy) {
         this.energy = energy;
     }
+
+
 }
 
 

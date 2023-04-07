@@ -13,8 +13,22 @@ public class CourierBike  extends Person{
         super();
     }
 
-    public CourierBike(int id, String name, double speed, double energy) {
+    public CourierBike(int id, String name) {
         super(id, name);
     }
 
+    public boolean isFree() {
+        return free;
+    }
+
+    @Override
+    public String toString() {
+        return "CourierCar{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", speed=" + getSpeed() +
+                ", energy=" + getEnergy() +
+                ", free=" + isFree() +
+                '}';
+    }
 }
