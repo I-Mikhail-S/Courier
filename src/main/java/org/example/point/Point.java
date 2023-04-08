@@ -15,8 +15,8 @@ public class Point {
         return X;
     }
 
-    public void setX(double x) {
-        if(PointBuilder.pointIsValid(Y)) {
+    public void setX(double X) {
+        if(PointBuilder.pointIsValid(X)) {
             this.X = X;
         }
     }
@@ -31,16 +31,16 @@ public class Point {
         }
     }
     public  double distancePoint(double x,double y){
-        if (x != getX() && Y != getY()) {
+        if (x != getX() && y != getY()) {
             return (double) Math.sqrt(Math.pow((x - getX()), 2) + Math.pow((y - getY()), 2));
         }
-        throw new RuntimeException("Проверить точки");
+        throw new RuntimeException("Проверьте точки!");
     }
     public double distancePoint(Point z) {
         if (z.getX() != getX() && z.getY() != getY()) {
             return Math.sqrt(Math.pow((z.getX() - getX()), 2) + Math.pow((z.getY() - getY()), 2));
         }
-        throw new RuntimeException("Проверить точки");
+        throw new RuntimeException("Проверьте точки!");
     }
 
     @Override

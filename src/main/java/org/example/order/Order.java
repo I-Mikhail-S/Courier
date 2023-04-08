@@ -18,8 +18,8 @@ public class Order {
 
     private double timeInterval;
 
-
     private EnumOrder weight;
+
 
     public Order(){
 
