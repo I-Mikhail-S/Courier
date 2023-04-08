@@ -13,8 +13,7 @@ public class TimeBuilder {
     private static String format = "mm:ss";
    private static SimpleDateFormat dateFormat;
 
-    public static boolean isValidTime(String time)
-    {
+    public static boolean isValidTime(String time) {
 
         // Regex to check valid time in 12-hour format.
         String regexPattern
