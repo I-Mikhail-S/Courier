@@ -1,6 +1,6 @@
 package org.example.main;
 
-import org.example.enums.EnumCourier;
+import org.example.enumType.EnumCourier;
 import org.example.fabricPerson.BuilderPerson;
 import org.example.person.Person;
 

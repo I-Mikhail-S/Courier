@@ -1,4 +1,4 @@
-package org.example.enums;
+package org.example.enumType;
 
 public enum EnumCourier {
     PEOPLE,
