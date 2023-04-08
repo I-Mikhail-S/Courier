@@ -9,15 +9,16 @@ public  class Person {
     private double speed;
     private double energy;
 
+    // setIsFree why?
     public boolean getIsFree() {
         return setIsFree;
     }
-
     public void setSetIsFree(boolean setIsFree) {
         this.setIsFree = setIsFree;
     }
-
     private boolean setIsFree;
+    // setIsFree why?
+
     public Person() {
 
     }

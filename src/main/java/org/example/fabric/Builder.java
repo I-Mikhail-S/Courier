@@ -4,6 +4,8 @@ import org.example.courier.CourierBike;
 import org.example.courier.CourierCar;
 import org.example.courier.CourierPeople;
 import org.example.enums.EnumCourier;
+import org.example.order.EnumOrder;
+import org.example.order.Order;
 import org.example.person.Person;
 
 public class Builder {
@@ -43,7 +45,6 @@ public class Builder {
         return this;
     }
     public Person build() {
-
         return person;
     }
 
@@ -88,5 +89,26 @@ public class Builder {
 
             return person;
         }
+
+        Order getParameterOrder(EnumOrder enumOrder) throws Exception {
+            Order order = new Order();
+
+            switch (enumOrder) {
+                case LIGHT:
+                    order.setWeight(EnumOrder.LIGHT);
+                    break;
+                case MEDIUM:
+                    order.setWeight(EnumOrder.MEDIUM);
+                    break;
+                case HARD:
+                    order.setWeight(EnumOrder.HARD);
+                    break;
+                default:
+                    throw new Exception("Invalid product type!");
+            }
+            return order;
+        }
+
+
     }
 }

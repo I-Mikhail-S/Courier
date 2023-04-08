@@ -19,6 +19,8 @@ public class Order {
     private double timeInterval;
 
 
+    private EnumOrder weight;
+
     public Order(){
 
     }
@@ -43,6 +45,13 @@ public class Order {
     }
 
     */
+    public EnumOrder getWeight() {
+        return weight;
+    }
+
+    public void setWeight(EnumOrder weight) {
+        this.weight = weight;
+    }
 
 
     public int getId() {
