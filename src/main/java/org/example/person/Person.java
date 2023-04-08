@@ -1,6 +1,6 @@
 package org.example.person;
 /**
- * Фундаментальный клас person....
+ * Фундаментальный класс person....
  */
 public  class Person {
 

@@ -9,6 +9,8 @@ public class CourierBike  extends Person{
     private double energy;
     private boolean free;
 
+    //Объясните, пожалуйста, вы забыли про поле free или так надо?
+
     public CourierBike() {
         super();
     }
