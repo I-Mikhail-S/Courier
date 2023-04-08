@@ -1,46 +1,44 @@
-package org.example.fabric;
+package org.example.fabricPerson;
 
 import org.example.courier.CourierBike;
 import org.example.courier.CourierCar;
 import org.example.courier.CourierPeople;
 import org.example.enums.EnumCourier;
-import org.example.order.EnumOrder;
-import org.example.order.Order;
 import org.example.person.Person;
 
-public class Builder {
+public class BuilderPerson {
 
     Person person;
 
-    public Builder(EnumCourier type) throws Exception {
+    public BuilderPerson(EnumCourier type) throws Exception {
 
         person = new Factory().getNewCourier(type);
     }
 
-    public Builder energy(double energy) {
+    public BuilderPerson energy(double energy) {
 
         person.setEnergy(energy);
         return this;
     }
 
-    public Builder name(String name) {
+    public BuilderPerson name(String name) {
 
         person.setName(name);
         return this;
     }
 
-    public Builder id(int id) {
+    public BuilderPerson id(int id) {
 
         person.setId(id);
         return this;
     }
 
-    public Builder speed(double speed) {
+    public BuilderPerson speed(double speed) {
 
         person.setSpeed(speed);
         return this;
     }
-    public Builder isFree(boolean free){
+    public BuilderPerson isFree(boolean free){
         person.setSetIsFree(free);
         return this;
     }

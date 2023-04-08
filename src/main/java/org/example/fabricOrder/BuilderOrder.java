@@ -5,6 +5,8 @@ import org.example.order.Order;
 
 public class BuilderOrder {
 
+    Order order;
+
 
 
 
