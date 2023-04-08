@@ -6,7 +6,7 @@ import org.example.time.Time;
 // TODO: 08/04/2023
 public class Order {
     private int id;
-    private Point pointStart;
+    private Point pointStart;//add new class with point sbora
     private Point pointFinish;
     //private double distance;
     private Time timeStart;
