@@ -3,7 +3,7 @@ package org.example.fabric;
 import org.example.courier.CourierBike;
 import org.example.courier.CourierCar;
 import org.example.courier.CourierPeople;
-import org.example.enums.EnumCourier;
+import org.example.enumType.EnumCourier;
 import org.example.order.EnumOrder;
 import org.example.order.Order;
 import org.example.person.Person;
