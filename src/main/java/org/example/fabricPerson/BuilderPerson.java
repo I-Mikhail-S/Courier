@@ -1,9 +1,11 @@
 package org.example.fabricPerson;
 
+import org.example.checkCourier.CheckCourier;
+import org.example.checkCourier.ICheckCourier;
 import org.example.courier.CourierBike;
 import org.example.courier.CourierCar;
 import org.example.courier.CourierPeople;
-import org.example.enums.EnumCourier;
+import org.example.enumType.EnumCourier;
 import org.example.person.Person;
 
 public class BuilderPerson {
@@ -51,10 +53,11 @@ public class BuilderPerson {
 
         Person getNewCourier(EnumCourier enumCourier) throws Exception {
             Person person = null;
-
+            ICheckCourier checkCourier = new CheckCourier();
             switch (enumCourier) {
                 case CAR:
                     person = new CourierCar();
+                    if(checkCourier.checkCarCourier(person)) throw new Exception("Не коректные данные");
                     break;
                 case BIKE:
                     person = new CourierBike();
@@ -68,28 +71,26 @@ public class BuilderPerson {
 
             return person;
         }
-        Person getNewCourier(int id,String name,double speed,double energy,EnumCourier enumCourier) throws Exception {
+        Person getNewCourier(int id, String name, double speed, double energy, EnumCourier enumCourier) throws Exception {
             Person person = null;
-
+            ICheckCourier checkCourier = new CheckCourier();
             switch (enumCourier) {
                 case CAR:
                     person = new CourierCar(id,name,speed,energy);
+                    if(checkCourier.checkCarCourier(person)) throw new Exception("Не коректные данные");
                     break;
                 case BIKE:
                     person = new CourierBike(id,name,speed,energy);
+                    if(checkCourier.checkBikeCourier(person)) throw new Exception("Не коректные данные");
                     break;
                 case PEOPLE:
                     person = new CourierPeople(id,name,speed,energy);
+                    if(checkCourier.checkPeopleCourier(person)) throw new Exception("Не коректные данные");
                     break;
                 default:
                     throw new Exception("Invalid product type!");
             }
-
             return person;
         }
-
-
-
-
     }
 }
