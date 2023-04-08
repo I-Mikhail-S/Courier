@@ -1,58 +1,28 @@
 package org.example.order;
 
 import org.example.point.Point;
-import org.example.point.PointBuilder;
+import org.example.time.Time;
+
 // TODO: 08/04/2023
 public class Order {
     private int id;
-
-    //private Courier? courier;
-
-    //Eсли что-то не так, то исправляйте, пожалуйста
-
-    private Point a;
-
-    private Point b;
-
-    private double distance;
-
-    private double timeInterval;
-
+    private Point pointStart;//add new class with point sbora
+    private Point pointFinish;
+    //private double distance;
+    private Time timeStart;
+    private Time timeFinish;
     private EnumOrder weight;
 
+    public Order() {}
 
-    public Order(){
-
-    }
-    public Order(int id, Point a, Point b, double distance, double timeInterval) {
-        //Я думаю, что тут нужна проверка на актуальность, но я не уверен, как вы её делаете
-        //courier = courier;
+    public Order(int id, Point pointStart, Point pointFinish, Time timeStart, Time timeFinish, EnumOrder weight) {
         this.id = id;
-        this.a = a;
-        this.b = b;
-        this.distance = distance;
-        this.timeInterval = timeInterval;
-    }
-
-
-    /*
-
-    public Courier? getCourier() {
-    return courier;
-    }
-    public void setCourier(Courier? courier){
-    this.courier = courier
-    }
-
-    */
-    public EnumOrder getWeight() {
-        return weight;
-    }
-
-    public void setWeight(EnumOrder weight) {
+        this.pointStart = pointStart;
+        this.pointFinish = pointFinish;
+        this.timeStart = timeStart;
+        this.timeFinish = timeFinish;
         this.weight = weight;
     }
-
 
     public int getId() {
         return id;
@@ -62,27 +32,43 @@ public class Order {
         this.id = id;
     }
 
-    public Point getA() {
-        return a;
+    public Point getPointStart() {
+        return pointStart;
     }
 
-    public void setA(Point a) {
-        this.a = a;
+    public void setPointStart(Point pointStart) {
+        this.pointStart = pointStart;
     }
 
-    public double getDistance() {
-        return distance;
+    public Point getPointFinish() {
+        return pointFinish;
     }
 
-    public void setDistance(double distance) {
-        this.distance = distance;
+    public void setPointFinish(Point pointFinish) {
+        this.pointFinish = pointFinish;
     }
 
-    public double getTimeInterval() {
-        return timeInterval;
+    public Time getTimeStart() {
+        return timeStart;
     }
 
-    public void setTimeInterval(double timeInterval) {
-        this.timeInterval = timeInterval;
+    public void setTimeStart(Time timeStart) {
+        this.timeStart = timeStart;
+    }
+
+    public Time getTimeFinish() {
+        return timeFinish;
+    }
+
+    public void setTimeFinish(Time timeFinish) {
+        this.timeFinish = timeFinish;
+    }
+
+    public EnumOrder getWeight() {
+        return weight;
+    }
+
+    public void setWeight(EnumOrder weight) {
+        this.weight = weight;
     }
 }
