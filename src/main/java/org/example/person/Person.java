@@ -4,24 +4,22 @@ package org.example.person;
  */
 public  class Person {
 
-    private int id;//
+    private int id;
     private String name;
     private double speed;
     private double energy;
 
     // setIsFree why?
+    private boolean setIsFree;
     public boolean getIsFree() {
         return setIsFree;
     }
     public void setSetIsFree(boolean setIsFree) {
         this.setIsFree = setIsFree;
     }
-    private boolean setIsFree;
     // setIsFree why?
 
-    public Person() {
-
-    }
+    public Person() {}
 
     public Person(int id, String name, double speed, double energy) {
         this.id = id;

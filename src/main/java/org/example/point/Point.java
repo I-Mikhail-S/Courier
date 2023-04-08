@@ -4,7 +4,7 @@ public class Point {
     private double X;
     private double Y;
 
-    public Point(double x, double y) {
+    public Point(double x, double y) throws Exception {
         if(PointBuilder.pointIsValid(X,Y)) {
             X = x;
             Y = y;
@@ -15,7 +15,7 @@ public class Point {
         return X;
     }
 
-    public void setX(double X) {
+    public void setX(double X) throws Exception {
         if(PointBuilder.pointIsValid(X)) {
             this.X = X;
         }
@@ -25,22 +25,22 @@ public class Point {
         return Y;
     }
 
-    public void setY(double Y) {
+    public void setY(double Y) throws Exception {
         if(PointBuilder.pointIsValid(Y)) {
            this.Y = Y;
         }
     }
-    public  double distancePoint(double x,double y){
+    public  double distancePoint(double x,double y) throws Exception {
         if (x != getX() && y != getY()) {
             return (double) Math.sqrt(Math.pow((x - getX()), 2) + Math.pow((y - getY()), 2));
         }
-        throw new RuntimeException("Проверьте точки!");
+        throw new Exception("Проверьте точки!");
     }
-    public double distancePoint(Point z) {
+    public double distancePoint(Point z) throws Exception {
         if (z.getX() != getX() && z.getY() != getY()) {
             return Math.sqrt(Math.pow((z.getX() - getX()), 2) + Math.pow((z.getY() - getY()), 2));
         }
-        throw new RuntimeException("Проверьте точки!");
+        throw new Exception("Проверьте точки!");
     }
 
     @Override
