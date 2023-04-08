@@ -3,6 +3,7 @@ package org.example.fabricOrder;
 import org.example.order.EnumOrder;
 import org.example.order.Order;
 import org.example.point.Point;
+import org.example.time.Time;
 
 public class BuilderOrder {
     Order order;
@@ -16,16 +17,29 @@ public class BuilderOrder {
         return this;
     }
 
-    public BuilderOrder start (Point start) {
-        order.setStart(start);
+    public BuilderOrder pointStart (Point pointStart) {
+        order.setPointStart(pointStart);
         return this;
     }
 
-    public BuilderOrder finish (Point finish) {
-        order.setFinish(finish);
+    public BuilderOrder pointFinish (Point pointFinish) {
+        order.setPointFinish(pointFinish);
         return this;
     }
 
+    public BuilderOrder timeStart (Time timeStart) {
+        order.setTimeStart(timeStart);
+        return this;
+    }
+
+    public BuilderOrder timeFinish (Time timeFinish) {
+        order.setTimeFinish(timeFinish);
+        return this;
+    }
+
+    public Order build() {
+        return order;
+    }
     //public BuilderOrder
 
     private class Factory {
