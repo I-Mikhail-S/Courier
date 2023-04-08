@@ -13,30 +13,25 @@ public class BuilderPerson {
     Person person;
 
     public BuilderPerson(EnumCourier type) throws Exception {
-
         person = new Factory().getNewCourier(type);
     }
 
     public BuilderPerson energy(double energy) {
-
         person.setEnergy(energy);
         return this;
     }
 
     public BuilderPerson name(String name) {
-
         person.setName(name);
         return this;
     }
 
     public BuilderPerson id(int id) {
-
         person.setId(id);
         return this;
     }
 
     public BuilderPerson speed(double speed) {
-
         person.setSpeed(speed);
         return this;
     }

@@ -1,41 +1,37 @@
 package org.example.order;
 
 import org.example.point.Point;
-import org.example.point.PointBuilder;
+import org.example.time.Time;
+
 // TODO: 08/04/2023
 public class Order {
     private int id;
+    private Point start;
+    private Point finish;
+    //private double distance;
+    private Time timeStart;
+    private Time timeFinish;
+    private EnumOrder weight;
 
     //private Courier? courier;
 
-    //Eсли что-то не так, то исправляйте, пожалуйста
+    public Order() {}
 
-    private Point a;
-
-    private Point b;
-
-    private double distance;
-
-    private double timeInterval;
-
-    private EnumOrder weight;
-
-
-    public Order(){
-
-    }
-    public Order(int id, Point a, Point b, double distance, double timeInterval) {
-        //Я думаю, что тут нужна проверка на актуальность, но я не уверен, как вы её делаете
-        //courier = courier;
+    public Order(int id, Point start, Point finish, Time timeStart, Time timeFinish, EnumOrder weight) {
         this.id = id;
-        this.a = a;
-        this.b = b;
-        this.distance = distance;
-        this.timeInterval = timeInterval;
+        this.start = start;
+        this.finish = finish;
+        this.timeStart = timeStart;
+        this.timeFinish = timeFinish;
+        this.weight = weight;
     }
+
+//Я думаю, что тут нужна проверка на актуальность, но я не уверен, как вы её делаете
+        //courier = courier;
 
 
     /*
+
 
     public Courier? getCourier() {
     return courier;
@@ -62,27 +58,20 @@ public class Order {
         this.id = id;
     }
 
-    public Point getA() {
-        return a;
+    public Point getStart() {
+        return start;
     }
 
-    public void setA(Point a) {
-        this.a = a;
+    public void setStart(Point start) {
+        this.start = start;
     }
 
-    public double getDistance() {
-        return distance;
+    public Point getFinish() {
+        return finish;
     }
 
-    public void setDistance(double distance) {
-        this.distance = distance;
+    public void setFinish(Point finish) {
+        this.finish = finish;
     }
 
-    public double getTimeInterval() {
-        return timeInterval;
-    }
-
-    public void setTimeInterval(double timeInterval) {
-        this.timeInterval = timeInterval;
-    }
 }
