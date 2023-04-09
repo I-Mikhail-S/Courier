@@ -3,10 +3,10 @@ package org.example.algorithmDijkstra;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Graph {
+public class GraphDijkstra {
     private final int MAX_VERTS = 10;// максимальное количество вершин
     private final int INFINITY = 100000000; // это число у нас будет служить в качестве "бесконечности"
-    private Vertex vertexList[]; // список вершин
+    private VertexDijkstra vertexList[]; // список вершин
     private int relationMatrix[][]; // матрица связей вершин
     private int countOfVertices; // текущее количество вершин
     private int countOfVertexInTree; // количество рассмотренных вершин в дереве
@@ -14,8 +14,8 @@ public class Graph {
     private int currentVertex; // текущая вершина
     private int startToCurrent; //расстояние до currentVertex
 
-    public Graph() {
-        vertexList = new Vertex[MAX_VERTS]; // матрица смежности
+    public GraphDijkstra() {
+        vertexList = new VertexDijkstra[MAX_VERTS]; // матрица смежности
         relationMatrix = new int[MAX_VERTS][MAX_VERTS];
         countOfVertices = 0;
         countOfVertexInTree = 0;
@@ -28,7 +28,7 @@ public class Graph {
     }
 
     public void addVertex(char lab) {// задание новых вершин
-        vertexList[countOfVertices++] = new Vertex(lab);
+        vertexList[countOfVertices++] = new VertexDijkstra(lab);
     }
 
     public void addEdge(int start, int end, int weight) {

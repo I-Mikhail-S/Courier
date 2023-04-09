@@ -1,4 +1,4 @@
-package org.example.graph;
+package org.example.algorithmDijkstra;
 
 
 import java.util.ArrayList;

@@ -1,10 +1,10 @@
 package org.example.algorithmDijkstra;
 
-public class Vertex {
+public class VertexDijkstra {
     private char label;
     private boolean isInTree;
 
-    public Vertex(char label) {
+    public VertexDijkstra(char label) {
         this.label = label;
         this.isInTree = false;
     }
