@@ -1,4 +1,4 @@
-package org.example.graph;
+package org.example.algorithmDijkstra;
 
 public class Vertex {
     private char label;

@@ -1,8 +1,7 @@
-package org.example.graph;
+package org.example.algorithmDijkstra;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class Graph {
     private final int MAX_VERTS = 10;// максимальное количество вершин
